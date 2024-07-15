@@ -1,8 +1,9 @@
 FROM python:3
-WORKDIR /usr/src/app
 
 ## Copy Secret.json into working directory
 COPY secret.json /usr/src/app/secret.json
+
+WORKDIR /usr/src/app
 
 ## Install packages
 COPY requirements.txt ./
