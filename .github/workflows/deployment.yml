@@ -27,7 +27,7 @@ jobs:
 
       - name: Create secret.json
         run: |
-          echo -e {\n"SECRET_KEY": "${{ secrets.SECRET_KEY }}"\n} > secrets.json
+          echo { "SECRET_KEY": "${{ secrets.SECRET_KEY }}" } > ./secrets.json
 
       - name: Build, tag, and push the image to Amazon ECR
         id: build-image
