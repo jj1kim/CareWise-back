@@ -19,5 +19,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/carelabel/search/', include('search.urls')),
+    path('carewise-searchImage/', include('search.urls')),
 ]
