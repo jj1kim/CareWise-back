@@ -1,7 +1,7 @@
 FROM python:3
 
 ## Copy Secret.json into working directory
-COPY secret.json /usr/src/app/secret.json
+COPY secrets.json /usr/src/app/secrets.json
 
 WORKDIR /usr/src/app
 
