@@ -26,10 +26,8 @@ jobs:
         uses: aws-actions/amazon-ecr-login@v1
 
       - name: Create secret.json
-        env:
-          DJANGO_SECRET_KEY: ${{ secrets.SECRET_KEY }}
         run: |
-          echo {"SECRET_KEY": "$DJANGO_SECRET_KEY"} > secrets.json
+          echo "{"SECRET_KEY": "${{ secrets.SECRET_KEY }}"}" > secrets.json
 
       - name: Build, tag, and push the image to Amazon ECR
         id: build-image
